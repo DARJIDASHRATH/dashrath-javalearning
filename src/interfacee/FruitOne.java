@@ -1,7 +1,7 @@
 package interfacee;
 
 /**
- * child class of Fruit create object
+ * Child class of Fruit create object
  * 
  * @author DASHRATH
  * @version 17.0

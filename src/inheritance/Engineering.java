@@ -1,7 +1,7 @@
 package inheritance;
 
 /**
- * perant class
+ * Perant class
  * 
  * @author DASHRATH
  * @version 15.0

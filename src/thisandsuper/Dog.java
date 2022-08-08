@@ -1,5 +1,10 @@
 package thisandsuper;
-
+/**
+ * 
+ * @author DASHRATH
+ * @version 11.1
+ * @since
+ */
 public class Dog extends Animal {
 
 	Dog() {

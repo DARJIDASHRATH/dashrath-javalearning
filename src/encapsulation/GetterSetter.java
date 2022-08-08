@@ -1,7 +1,7 @@
 package encapsulation;
 
 /**
- * using setter and getter we set the value and get value with object
+ * Using setter and getter we set the value and get value with object
  * 
  * @author DASHRATH
  * @version

@@ -1,10 +1,10 @@
 package polymorphismm;
 
 /**
- * 1st child class of Runtime
+ * 1st Child class of Runtime
  * 
  * @author DASHRATH
- * @version 16.2
+ * @version 16.1.2
  * @since
  */
 public class RunTimeOne extends RunTime {

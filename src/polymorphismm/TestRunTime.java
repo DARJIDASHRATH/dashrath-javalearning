@@ -1,10 +1,10 @@
 package polymorphismm;
 
 /**
- * test class for Runtime and child classs
+ * Test class for Runtime and child classs
  * 
  * @author DASHRATH
- * @version 16.2
+ * @version 16.1.4
  * @since
  */
 public class TestRunTime extends RunTime {

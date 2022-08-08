@@ -15,7 +15,7 @@ public class Operators {
 		double intrestRate = (double) 10 / (12 * 100); // Actual Rate In Percentage (10%)
 		double tenure = 24; // in month
 
-		// applied formula of EMI
+		// Applied Formula Of EMI
 		double emi = (loanAmount * intrestRate * Math.pow(1 + intrestRate, tenure))
 				/ (Math.pow(1 + intrestRate, tenure) - 1);
 

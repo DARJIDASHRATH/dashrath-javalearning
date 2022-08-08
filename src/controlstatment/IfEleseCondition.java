@@ -12,13 +12,11 @@ package controlstatment;
 public class IfEleseCondition {
 
 	public static void main(String[] args) {
-		int age = 27; // craete age veriable
-		// if condition apply
+		int age = 27; // Craete age veriable
+		// If condition apply
 		if (age == 27) {
 			System.out.println("You Guess Correct");
-		}
-
-		else {
+		} else {
 			System.out.println("Opps Not Correct");
 		}
 

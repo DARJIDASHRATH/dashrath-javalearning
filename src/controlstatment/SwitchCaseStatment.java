@@ -11,7 +11,6 @@ package controlstatment;
 public class SwitchCaseStatment {
 
 	public static void main(String[] args) {
-
 		System.out.println("current month");
 		int month = 8;
 		switch (month) {

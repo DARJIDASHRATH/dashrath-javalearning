@@ -3,7 +3,7 @@ package loops;
 public class OddEven {
 
 	public static void main(String[] args) {
-		// cearte triangle as odd even number
+		// Cearte triangle as odd even number
 		int n = 5;
 		
 		for (int i = 1; i <= n; i++) {

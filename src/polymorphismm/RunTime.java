@@ -1,10 +1,10 @@
 package polymorphismm;
 
 /**
- * parent calss
+ * Parent calss 
  * 
  * @author DASHRATH
- * @version 16.2
+ * @version 16.1.1
  * @since
  */
 public class RunTime {

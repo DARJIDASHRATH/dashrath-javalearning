@@ -19,7 +19,6 @@ public class Aeroplane {
 		this();
 		this.speed = speed;
 	}
-
 	int speed; // Created Speed variable
 
 	public void speed() {

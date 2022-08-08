@@ -1,14 +1,19 @@
 package thisandsuper;
-
+/**
+ * 
+ * @author DASHRATH
+ * @version 11.2
+ * @since
+ */
 public class TestAnimal extends Dog {
-	TestAnimal() // calling base class constructor
+	TestAnimal() // Calling base class constructor
 	{
-		super(); // here we are calling our super for getting information
+		super(); // Here we are calling our super for getting information
 	}
 
-	// main() method start
+	// Main() method start
 	public static void main(String[] args) {
-		// call default constructor of the TestAnimal
+		// Call default constructor of the TestAnimal
 		new TestAnimal();
 		System.out.println();
 	}

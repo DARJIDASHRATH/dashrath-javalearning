@@ -1,7 +1,7 @@
 package loops;
 
 /**
- * using do-while loop print 1 to 10
+ * Using do-while loop print 1 to 10
  * 
  * 
  * @author DASHRATH
@@ -12,12 +12,11 @@ package loops;
 public class DoWhile {
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
 		int i = 1;
 		do {
 			System.out.println(i);
-			i++; // increament in i veriable
-		} while (i <= 10); // while loop contion
+			i++; // Increament in i veriable
+		} while (i <= 10); // While loop contion
 	}
 
 }

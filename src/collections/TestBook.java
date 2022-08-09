@@ -1,16 +1,16 @@
 package collections;
 
-/**Demonstrate Comparator interface
- * TestBook class is the Runner class for Book clss
+import java.util.ArrayList;
+import java.util.Collections;
+
+/**
+ * Demonstrate Comparator interface TestBook class is the Runner class for Book
+ * clss
  * 
  * @author DASHRATH
  * @version 23.2.5
  * @since
  */
-
-import java.util.ArrayList;
-import java.util.Collections;
-
 public class TestBook {
 
 	public static void main(String[] args) {

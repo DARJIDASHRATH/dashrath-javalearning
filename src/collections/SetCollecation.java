@@ -1,6 +1,6 @@
 package collections;
 
-/** Set collection. we craete same elemant 
+/** Set collection. We craete same elemant 
  * and see this elemant is set allow or not. 
  * 
  *  @author DASHRATH

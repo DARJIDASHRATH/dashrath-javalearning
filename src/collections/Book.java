@@ -1,4 +1,5 @@
 package collections;
+
 /**Demonstrate Comparator interface
  * 
  * @author DASHRATH

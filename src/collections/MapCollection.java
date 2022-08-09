@@ -18,7 +18,7 @@ public class MapCollection {
 		ba.put(102, "World");
 		ba.put(103, "$yourname");
 		ba.put(104, "myname");
-		ba.put(105, "World"); // Adding same value to diffrent keys(key 102 and 105 has same value)
+		ba.put(105, "World"); // Adding same value to diffrent keys(key 102 and 105 have same value)
 
 		System.out.println(ba);
 

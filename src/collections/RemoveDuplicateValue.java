@@ -1,5 +1,13 @@
 package collections;
 
+/**Using Arraylist and LinkedHashSet Removing 
+ * Duplicate data from list
+ * 
+ * @author DASHRATH
+ * @version 22.0
+ * @since
+ */
+
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.LinkedHashSet;
@@ -17,7 +25,7 @@ public class RemoveDuplicateValue {
 		newList.clear();
 		// Add Arraylist data in Set
 		newList.addAll(list);
-		System.out.println("Removed Duplicate value from list:" +" "+ newList);
+		System.out.println("Removed Duplicate value from list:" + " " + newList);
 	}
 
 }

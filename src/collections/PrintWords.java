@@ -1,5 +1,5 @@
 package collections;
-/** print values using an iterator
+/** Print values using an iterator
  * 
  * @author DASHRATH
  * @version  20.0
@@ -17,7 +17,7 @@ public class PrintWords {
 		list.add("$yourname");
 		list.add("myname");
 		
-		Iterator<String> i =list.iterator();
+		Iterator<String> i = list.iterator();
 		System.out.println(i.next());
 		System.out.println(i.next());
 		System.out.println(i.next());

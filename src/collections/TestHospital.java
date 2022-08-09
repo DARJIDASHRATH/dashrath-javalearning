@@ -5,7 +5,6 @@ package collections;
  * @version 23.1.2
  * @since 
  */
-
 import java.util.ArrayList;
 import java.util.Collections;
 

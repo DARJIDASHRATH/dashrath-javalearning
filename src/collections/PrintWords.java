@@ -1,13 +1,13 @@
 package collections;
-/** Print values using an iterator
+import java.util.ArrayList;
+import java.util.Iterator;
+/** 
+ * Print values using an iterator
  * 
  * @author DASHRATH
  * @version  20.0
  * @since
  * */
-import java.util.ArrayList;
-import java.util.Iterator;
-
 public class PrintWords {
 
 	public static void main(String[] args) {

@@ -1,5 +1,8 @@
 package collections;
-
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.LinkedHashSet;
+import java.util.Set;
 /**Using Arraylist and LinkedHashSet Removing 
  * Duplicate data from list
  * 
@@ -7,12 +10,6 @@ package collections;
  * @version 22.0
  * @since
  */
-
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.LinkedHashSet;
-import java.util.Set;
-
 public class RemoveDuplicateValue {
 
 	public static void main(String[] args) {

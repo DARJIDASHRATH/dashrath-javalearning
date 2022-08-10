@@ -1,16 +1,14 @@
 package collections;
-
-/** Set collection. We craete same elemant 
+import java.util.HashSet;
+import java.util.Set;
+/**
+ *  Set collection. We craete same elemant 
  * and see this elemant is set allow or not. 
  * 
  *  @author DASHRATH
  *  @version 21.1
  *  @since
  */
-
-import java.util.HashSet;
-import java.util.Set;
-
 public class SetCollecation {
 
 	public static void main(String[] args) {
@@ -23,7 +21,6 @@ public class SetCollecation {
 		ab.add("myname");
 
 		System.out.println(ab);
-
 	}
 
 }

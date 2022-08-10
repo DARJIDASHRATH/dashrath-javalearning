@@ -1,7 +1,7 @@
 package collections;
 import java.util.Comparator;
-
-/**Demonstrate Comparator interface
+/**
+ * Demonstrate Comparator interface
  * sub class of Book class
  * 
  * @author DASHRATH

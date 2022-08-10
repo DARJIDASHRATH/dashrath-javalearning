@@ -1,5 +1,4 @@
 package collections;
-
 /**
  * Demostrate comperable interface
  * 

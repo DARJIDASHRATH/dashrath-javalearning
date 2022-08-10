@@ -1,8 +1,8 @@
 package collections;
 import java.util.ArrayList;
 import java.util.Collections;
-
-/**TestHospital is the Runner class for Hospital class
+/**
+ * TestHospital is the Runner class for Hospital class
  * 
  * @author DASHRATH
  * @version 23.1.2
@@ -19,7 +19,6 @@ public class TestHospital {
 
 		for (Hospital kd : zydus) {
 			System.out.println(kd.roomNumber + " " + kd.name + " " + kd.date);
-
 		}
 	}
 

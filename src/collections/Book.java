@@ -1,6 +1,6 @@
 package collections;
-
-/**Demonstrate Comparator interface
+/**
+ * Demonstrate Comparator interface
  * 
  * @author DASHRATH
  * @version 23.2.1
@@ -16,7 +16,6 @@ public class Book {
 		this.pageNumber = pageNumber;
 		this.name = name;
 		this.edition = edition;
-	
 	}
 
 }

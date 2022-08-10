@@ -25,5 +25,5 @@ public class WriteDetails {
 			e.getStackTrace();
 		}
 	}
-	
+
 }

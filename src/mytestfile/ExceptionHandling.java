@@ -1,9 +1,12 @@
 package mytestfile;
+
 import java.io.File;
 import java.io.IOException;
 import java.util.Scanner;
+
 /**
- * Exception handling 
+ * Exception handling
+ * 
  * @author DASHRATH
  * @version 25.4
  * @since
@@ -16,11 +19,7 @@ public class ExceptionHandling {
 		while (read.hasNext()) {
 			String w = read.next();
 			System.out.println(w);
-			close(read);
+		}
+		read.close();
 		}
 	}
-
-	private static void close(Scanner read) {
-	}
-
-}

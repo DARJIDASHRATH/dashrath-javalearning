@@ -17,13 +17,12 @@ public class ThrowAndThrows {
 
 	public static void main(String[] args) {
 		try {
-			int[] number = { 100, 1 };
-			int mynumber = number[1];
+			int[] number = { 1, 11, 111, 1111 };
+			int mynumber = number[2];
 			System.out.println(mynumber);
 			as();
 		} catch (IllegalAccessException e) {
 			System.out.println("Catch print");
-
 		}
 	}
 

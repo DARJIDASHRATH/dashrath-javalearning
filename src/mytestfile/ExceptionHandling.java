@@ -15,11 +15,12 @@ import java.util.Scanner;
 public class ExceptionHandling {
 
 	public static void main(String[] args) throws IOException {
-		Scanner read = new Scanner(new File("myTestFile.txt"));
-		while (read.hasNext()) {
-			String w = read.next();
+		Scanner txtFileReading = new Scanner(new File("myTestFile.txt"));
+		while (txtFileReading.hasNext()) {
+			String w = txtFileReading.next();
 			System.out.println(w);
 		}
-		read.close();
-		}
+		txtFileReading.close();
 	}
+	
+}

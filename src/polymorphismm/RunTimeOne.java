@@ -7,6 +7,7 @@ package polymorphismm;
  * @version 16.1.2
  * @since
  */
+
 public class RunTimeOne extends RunTime {
 
 	public void companyName() {

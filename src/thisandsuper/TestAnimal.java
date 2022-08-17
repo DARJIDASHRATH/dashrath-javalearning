@@ -1,10 +1,13 @@
 package thisandsuper;
+
 /**
+ * Testanimal calss have main method for animal and dog class
  * 
  * @author DASHRATH
  * @version 11.2
  * @since
  */
+
 public class TestAnimal extends Dog {
 	TestAnimal() // Calling base class constructor
 	{
@@ -13,7 +16,7 @@ public class TestAnimal extends Dog {
 
 	// Main() method start
 	public static void main(String[] args) {
-		// Call default constructor of the TestAnimal
+		// Call default constructor of the testAnimal
 		new TestAnimal();
 		System.out.println();
 	}

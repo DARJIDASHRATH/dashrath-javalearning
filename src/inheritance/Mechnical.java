@@ -7,14 +7,15 @@ package inheritance;
  * @version 15.0
  * @since
  */
+
 public class Mechnical extends Engineering {
 
 	public void branchs() {
-		System.out.println("Mechnical Branch Number is 1 ");
+		System.out.println("Mechnical Branch number is 1 ");
 	}
 
 	public void student() {
-		System.out.println("Mechnical Branch Total Student is 70");
+		System.out.println("Mechnical branch total student is 70");
 	}
 
 }

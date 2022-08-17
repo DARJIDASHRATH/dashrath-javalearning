@@ -1,8 +1,10 @@
 package mytestfile;
+
 import java.io.FileWriter;
 import java.io.IOException;
+
 /**
- * Adding My details in Txt file (myTestFile.txt).
+ * Adding my details in txt file (myTestFile.txt).
  * 
  * @author DASHRATH
  * @version 24.1
@@ -14,12 +16,12 @@ public class WriteDetails {
 
 	public static void main(String[] args) {
 		try {
-			FileWriter write = new FileWriter("myTestFile.txt");// Create object
+			FileWriter writeMyDetails = new FileWriter("myTestFile.txt");// Create txt file
 			// Adding my details
-			write.write("My Name Is Dashrath . " + "\n");
-			write.write("My Brith Month Is January ." + "\n");
-			write.write("I Have Done Engineering . " + "\n");
-			write.close();
+			writeMyDetails.write("My Name Is Dashrath . " + "\n");
+			writeMyDetails.write("My Brith Month Is January ." + "\n");
+			writeMyDetails.write("I Have Done Engineering . " + "\n");
+			writeMyDetails.close();
 			System.out.println("Write Successfully  ");
 		} catch (IOException e) {
 			e.getStackTrace();

@@ -7,14 +7,15 @@ package inheritance;
  * @version 15
  * @since
  */
+
 public class Electrical extends Engineering {
 
 	public void branchs() {
-		System.out.println("Electrical Branch Number is 2");
+		System.out.println("Electrical branch number is 2");
 	}
 
 	public void student() {
-		System.out.println("Electrical Branch Total student is 65");
+		System.out.println("Electrical branch total student is 65");
 	}
 
 }

@@ -1,21 +1,24 @@
 package collections;
+
 import java.util.Comparator;
+
 /**
- * Demonstrate Comparator interface sub class of Book class
+ * Demonstrate comparator interface sub class of book class
  * 
  * @author DASHRATH
  * @version 23.2.3
  * @since
  */
+
 public class BookTwo implements Comparator<Book> {
-	public int compare(Book selfHelp, Book fiction) {
-		if (selfHelp.pageNumber == fiction.pageNumber) {
+	public int compare(Book selfHelpBook, Book fictionBook) {
+		if (selfHelpBook.pageNumber == fictionBook.pageNumber) {
 			return 0;
-		} else if (selfHelp.pageNumber > fiction.pageNumber) {
+		} else if (selfHelpBook.pageNumber > fictionBook.pageNumber) {
 			return 1;
 		} else {
 			return 2;
 		}
 	}
-	
+
 }

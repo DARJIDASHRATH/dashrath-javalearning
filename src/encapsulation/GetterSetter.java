@@ -21,9 +21,9 @@ public class GetterSetter {
 	}
 
 	public static void main(String[] args) {
-		GetterSetter Society = new GetterSetter();
-		Society.setFlatNumber(102);
-		System.out.println("The Flat Number Is" + Society.getFlatNumber());
+		GetterSetter society = new GetterSetter();
+		society.setFlatNumber(102);
+		System.out.println("The Flat Number Is :" + society.getFlatNumber());
 	}
 
 }

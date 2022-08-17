@@ -2,6 +2,7 @@ package mytestfile;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
+
 /**
  * Input Handling 
  * 
@@ -13,9 +14,9 @@ import java.io.InputStreamReader;
 public class InputHandling {
 
 	public static void main(String[] args) throws IOException {
-		BufferedReader file = new BufferedReader(new InputStreamReader(System.in));
-		String name = file.readLine();
-		int age = Integer.parseInt(file.readLine());
+		BufferedReader readFile = new BufferedReader(new InputStreamReader(System.in));
+		String name = readFile.readLine();
+		int age = Integer.parseInt(readFile.readLine());
 		System.out.println("My name is : " + name);
 		System.out.println("My age is : " + age);
 	}

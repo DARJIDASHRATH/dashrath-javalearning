@@ -1,7 +1,7 @@
 package polymorphismm;
 
 /**
- * Test class for Runtime and child classs
+ * Test class for runtime and child classs
  * 
  * @author DASHRATH
  * @version 16.1.4
@@ -10,14 +10,14 @@ package polymorphismm;
 public class TestRunTime extends RunTime {
 
 	public static void main(String[] args) {
-		System.out.println("Print Company Name");
-		RunTime i;
+		System.out.println("Print company name");
+		RunTime company;
 
-		i = new RunTimeOne();
-		i.companyName();
+		company = new RunTimeOne();
+		company.companyName();
 
-		i = new RunTimeTwo();
-		i.companyName();
+		company = new RunTimeTwo();
+		company.companyName();
 	}
 
 }

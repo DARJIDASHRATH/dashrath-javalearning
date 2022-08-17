@@ -1,4 +1,5 @@
 package statickeyword;
+
 /**
  * Using static keyword we count buss pass through get
  *

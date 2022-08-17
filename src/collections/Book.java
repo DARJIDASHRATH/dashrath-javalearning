@@ -1,11 +1,12 @@
 package collections;
 /**
- * Demonstrate Comparator interface
+ * Demonstrate comparator interface
  * 
  * @author DASHRATH
  * @version 23.2.1
  * @since
  */
+
 public class Book {
 
 	int pageNumber;

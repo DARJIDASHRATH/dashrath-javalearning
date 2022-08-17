@@ -1,7 +1,7 @@
 package basicofjava;
 
 /**
- * Print Hello world
+ * Print hello world
  * 
  * @author DASHRATH
  * @version 1.0
@@ -11,9 +11,8 @@ package basicofjava;
 public class HelloWorld {
 
 	public static void main(String[] args) {
-		// printing Helloworld
-		System.out.println("HelloWorld");
-
+		// Printing Helloworld
+		System.out.println("Hello World");
 	}
 
 }

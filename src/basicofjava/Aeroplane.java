@@ -1,7 +1,7 @@
 package basicofjava;
 
 /**
- * using Constructor two objects sum
+ * Using "Constructor" two objects sum
  * 
  * @author DASHRATH
  * @version 7.0
@@ -10,9 +10,9 @@ package basicofjava;
 
 public class Aeroplane {
 
-	// Create Default Constructor
+	// Create default constructor
 	Aeroplane() {
-		System.out.println("Aeroplane started");
+		System.out.println("Aeroplane current speed");
 	}
 
 	Aeroplane(int speed) {
@@ -20,21 +20,21 @@ public class Aeroplane {
 		this.speed = speed;
 	}
 
-	int speed; // Created Speed variable
+	int speed;
 
 	public void speed() {
 		System.out.println(speed);
 	}
 
 	public static void main(String[] args) {
-		// Create Two Object for Sum of Two Aeroplanes Speed
-		Aeroplane A = new Aeroplane(100);
-		A.speed();
-		Aeroplane B = new Aeroplane(50);
-		B.speed();
+		// Create two Object for sum of two aeroplanes speed
+		Aeroplane airindia = new Aeroplane(100);
+		airindia.speed();
+		Aeroplane vistara = new Aeroplane(50);
+		vistara.speed();
 
-		System.out.println("Total Speed Of Both Aeroplane");
-		System.out.println(A.speed + B.speed); // printing sum of two objects
+		System.out.println("Total speed of both aeroplane");
+		System.out.println(airindia.speed + vistara.speed); // Printing sum of two objects
 	}
 
 }

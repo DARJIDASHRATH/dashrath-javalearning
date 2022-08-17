@@ -1,7 +1,7 @@
 package interfacee;
 
 /**
- * Child class of Fruit create object
+ * Child class of fruit create object
  * 
  * @author DASHRATH
  * @version 17.0
@@ -11,7 +11,7 @@ package interfacee;
 class FruitOne implements Fruit {
 
 	public void apple() {
-		System.out.println("Apple Price is high");
+		System.out.println("Apple price is high");
 	}
 
 	public void mango() {
@@ -19,9 +19,9 @@ class FruitOne implements Fruit {
 	}
 
 	public static void main(String[] args) {
-		Fruit A = new FruitOne();
-		A.apple();
-		A.mango();
+		Fruit fruitPrice = new FruitOne();
+		fruitPrice.apple();
+		fruitPrice.mango();
 	}
 
 }

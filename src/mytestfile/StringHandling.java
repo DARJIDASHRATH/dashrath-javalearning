@@ -1,6 +1,9 @@
 package mytestfile;
+
 import java.nio.file.Files;
 import java.nio.file.Paths;
+
+
 /**
  * String hanlding
  * 
@@ -13,15 +16,15 @@ import java.nio.file.Paths;
 public class StringHandling {
 
 	public static String readFileAsString(String fileName) throws Exception {
-		String details = "";
-		details = new String(Files.readAllBytes(Paths.get(fileName)));
-		return details;
+		String filesDetails = "";
+		filesDetails = new String(Files.readAllBytes(Paths.get(fileName)));
+		return filesDetails;
 	}
 
 	public static void main(String[] args) throws Exception {
 		// Print myTestFile.txt file data
-		String details = readFileAsString("D:\\dashrath-learningjava\\src\\mytestfile\\myTestFile.txt");
-		System.out.println(details);
+		String filesDetails = readFileAsString("D:\\dashrath-learningjava\\myTestFile.txt");
+		System.out.println(filesDetails);
 	}
 
 }

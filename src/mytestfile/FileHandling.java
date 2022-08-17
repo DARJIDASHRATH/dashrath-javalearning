@@ -1,7 +1,10 @@
 package mytestfile;
+
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.util.Scanner;
+
+
 /**
  * Reading Txt file using Scanner class
  * 
@@ -14,13 +17,13 @@ public class FileHandling {
 
 	public static void main(String[] args) {
 		try {
-			File ab = new File("myTestFile.txt");
-			Scanner my = new Scanner(ab);
-			while (my.hasNextLine()) {
-				String da = my.nextLine();
-				System.out.println(da);
+			File fileReading = new File("myTestFile.txt");
+			Scanner txtFileReading = new Scanner(fileReading);
+			while (txtFileReading.hasNextLine()) {
+				String readFile = txtFileReading.nextLine();
+				System.out.println(readFile);
 			}
-			my.close();
+			txtFileReading.close();
 		} catch (FileNotFoundException e) {
 			e.printStackTrace();
 			System.out.println("error");

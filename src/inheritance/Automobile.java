@@ -11,11 +11,11 @@ package inheritance;
 public class Automobile extends Engineering {
 
 	public void branchs() {
-		System.out.println("Automobile Branch Number is 3");
+		System.out.println("Automobile branch number is 3");
 	}
 
 	public void student() {
-		System.out.println("Automoblie Branch Total Student is 65");
+		System.out.println("Automoblie branch total student is 65");
 	}
 
 }

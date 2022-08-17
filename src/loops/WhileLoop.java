@@ -11,14 +11,13 @@ package loops;
 public class WhileLoop {
 
 	public static void main(String[] args) {
-		int i = 1;
-		int n = 10;
-		while (i <= n) // While loop conditions
+		int numberOfSheet = 1;
+		int totalNumberOfSheet = 10;
+		while (numberOfSheet <= totalNumberOfSheet) // While loop conditions
 		{
-			System.out.println(i);
-			i++; // Increment i on every loop
+			System.out.println(numberOfSheet);
+			numberOfSheet++; // Increment numberOfSheet on every loop
 		}
-
 	}
 
 }

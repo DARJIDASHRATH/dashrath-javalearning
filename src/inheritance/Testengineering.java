@@ -11,18 +11,18 @@ package inheritance;
 public class Testengineering extends Engineering {
 
 	public static void main(String[] args) {
-		// creating object of every child class
-		Mechnical class1 = new Mechnical();
-		((Mechnical) class1).branchs();
-		class1.student();
+		// Creating object for every child class
+		Mechnical branchOne = new Mechnical();
+		branchOne.branchs();
+		branchOne.student();
 
-		Electrical class2 = new Electrical();
-		class2.branchs();
-		class2.student();
+		Electrical branchTwo = new Electrical();
+		branchTwo.branchs();
+		branchTwo.student();
 
-		Automobile class3 = new Automobile();
-		class3.branchs();
-		class3.student();
+		Automobile branchThree = new Automobile();
+		branchThree.branchs();
+		branchThree.student();
 	}
-	
+
 }

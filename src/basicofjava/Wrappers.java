@@ -7,13 +7,14 @@ package basicofjava;
  * @version 9.0
  * @since
  */
+
 public class Wrappers {
 
 	@SuppressWarnings("removal")
 	public static void main(String[] args) {
-		int i = 100;
-		Integer j = new Integer(i); // boxing
-		System.out.println(i == j);
+		int sandBrickPrice = 100;
+		Integer ashBrickPrice = new Integer(sandBrickPrice); // Boxing
+		System.out.println(sandBrickPrice == ashBrickPrice);
 	}
 
 }

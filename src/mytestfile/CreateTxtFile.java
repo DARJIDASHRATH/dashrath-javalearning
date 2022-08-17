@@ -1,6 +1,8 @@
 package mytestfile;
+
 import java.io.File;
 import java.io.IOException;
+
 /**
  * Created Txt file call myTestFile
  * 
@@ -13,11 +15,11 @@ public class CreateTxtFile {
 
 	public static void main(String[] args) {
 		try {
-			File file = new File("myTestFile.txt"); // Create object
-			if (file.createNewFile()) {
-				System.out.println("create" + file.getName());
+			File txtFile = new File("myTestFile.txt"); // Create object
+			if (txtFile.createNewFile()) {
+				System.out.println("create" + txtFile.getName());
 			} else {
-				System.out.println("error");
+				System.out.println("File all ready created");
 			}
 		} catch (IOException e) {
 			e.getStackTrace();

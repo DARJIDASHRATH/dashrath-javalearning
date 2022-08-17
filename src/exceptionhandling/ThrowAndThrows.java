@@ -1,7 +1,7 @@
 package exceptionhandling;
 
 /**
- * Practical Number 18 Throw and Throws
+ * Practical number 18 throw and throws
  * 
  * @author DASHRATH
  * @version 18.3
@@ -11,18 +11,17 @@ package exceptionhandling;
 public class ThrowAndThrows {
 
 	public static void as() throws IllegalAccessException {
-		System.out.println("Throws print");
 		throw new IllegalAccessException();
 	}
 
 	public static void main(String[] args) {
 		try {
-			int[] number = { 1, 11, 111, 1111 };
-			int mynumber = number[2];
-			System.out.println(mynumber);
+			int[] accountNumber = { 1, 11, 111, 1111 };
+			int myAccountNumber = accountNumber[3];
+			System.out.println(myAccountNumber);
 			as();
 		} catch (IllegalAccessException e) {
-			System.out.println("Catch print");
+			System.out.println("Print error ");
 		}
 	}
 

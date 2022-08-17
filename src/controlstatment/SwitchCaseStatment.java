@@ -1,7 +1,7 @@
 package controlstatment;
 
 /**
- * TO Find current month
+ * TO find current month
  * 
  * @author DASHRATH
  * @version 3.0
@@ -11,9 +11,9 @@ package controlstatment;
 public class SwitchCaseStatment {
 
 	public static void main(String[] args) {
-		System.out.println("current month");
-		int month = 8;
-		switch (month) {
+		System.out.println("Current month");
+		int currentMonth = 8;
+		switch (currentMonth) {
 		case 1:
 			System.out.println("January");
 			break;
@@ -51,7 +51,6 @@ public class SwitchCaseStatment {
 			System.out.println("December");
 			break;
 		}
-
 	}
 
 }

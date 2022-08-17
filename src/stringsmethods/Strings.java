@@ -23,90 +23,89 @@ public class Strings {
 		String lowercase = name.toLowerCase();
 		System.out.println("Lower case:" + lowercase);
 		// String charAt
-		char ch = name.charAt(2);
-		System.out.println("String CharAt:" + ch);
+		char charecter = name.charAt(2);
+		System.out.println("String CharAt:" + charecter);
 		// String compareTo
-		String name1 = "Ram";
-		System.out.println("String compareTo:" + name.compareTo(name1));
+		String nameOne = "Ram";
+		System.out.println("String compareTo:" + name.compareTo(nameOne));
 		// String concat
-		String name2 = "love";
-		String allname = name.concat(name1).concat(name2);
-		System.out.println("String concat:" + allname);
+		String nameTwo = "love";
+		String allName = name.concat(nameOne).concat(nameTwo);
+		System.out.println("String concat:" + allName);
 		// String contains
 		System.out.println("String contains:" + name.contains("sh"));
 		// String endsWith
 		System.out.println("String endsWith:" + name.endsWith("h"));
 		// String equals
-		System.out.println("String equals:" + name.equals(name1));
+		System.out.println("String equals:" + name.equals(nameOne));
 		// String equalsIgnoreCase
-		System.out.println("String equalsIgnoreCase:" + name.equalsIgnoreCase(allname));
+		System.out.println("String equalsIgnoreCase:" + name.equalsIgnoreCase(allName));
 		// String format
-		String number1 = String.format("My Name is %s", name);
-		System.out.println("String format:" + number1);
+		String stringFormat = String.format("My Name is %s", name);
+		System.out.println("String format:" + stringFormat);
 		// String getBytes
-		String n = "amee";
-		byte[] ch1 = n.getBytes();
+		String girlName = "Amee";
+		byte[] ch1 = girlName.getBytes();
 		System.out.println("String getBytes is " + ch1);
 		// String getChars
 
 		// String indexOf
-		int number2 = name.indexOf("sh");
-		System.out.println("String indexOf:" + number2);
+		int indexNumber = name.indexOf("sh");
+		System.out.println("String indexOf:" + indexNumber);
 		// String intern
-		String s1 = new String("Dashrath");
-		String s2 = "Dashrath";
-		String s3 = s2.intern();
-		System.out.println("String intern is:" + (s1 == s2));
-		System.out.println("String intern is:" + (s2 == s3));
+		String customerName = new String("Dashrath");
+		String customerNameOne = "Dashrath";
+		String customerNameTwo = customerNameOne.intern();
+		System.out.println("String intern is:" + (customerName == customerNameOne));
+		System.out.println("String intern is:" + (customerNameOne == customerNameTwo));
 		// String isEmpty
-		String n1 = "";
-		String n2 = "name";
-		System.out.println("String is Empty:" + (n1.isEmpty()));
-		System.out.println("String is Empty:" + (n2.isEmpty()));
+		String empty = "";
+		String filed = "Name";
+		System.out.println("String is Empty:" + (empty.isEmpty()));
+		System.out.println("String is Empty:" + (filed.isEmpty()));
 		// String join
-		String q = String.join("-", "04", "08", "2022");
-		System.out.println("String is join :" + q);
+		String date = String.join("-", "04", "08", "2022");
+		System.out.println("String is join :" + date);
 		// String lastIndexOf
-		String q1 = "welcome to the world";
-		int q2 = q1.lastIndexOf('e');
-		System.out.println("String is lastIndexOf :" + q2);
+		String lastIndex = "Welcome to the world";
+		int printIndex = lastIndex.lastIndexOf('e');
+		System.out.println("String is lastIndexOf :" + printIndex);
 		// String replace
-		String a = "the sky color is blue";
-		String a1 = a.replace("blue", "skyblue");
-		System.out.println("String is replace: " + a1);
+		String skyColor = "the sky color is blue";
+		String changedColor = skyColor.replace("blue", "skyblue");
+		System.out.println("String is replace: " + changedColor);
 		// String replaceall
-		String a2 = "the sky color is blue";
-		String a3 = a2.replaceAll("e", "a");
-		System.out.println("String is replace: " + a3);
+		String replaceAlphabet = "the sky color is blue";
+		String changedAlphabet = replaceAlphabet.replaceAll("e", "a");
+		System.out.println("String is replace: " + changedAlphabet);
 		// String split
-		String b = "the sky color is blue";
-		String[] b1 = b.split(" ");
-		for (String b2 : b1) {
-			System.out.println("String is Split: " + b2);
+		String splitSentance = "The sky color is blue";
+		String[] splitAfter = splitSentance.split(" ");
+		for (String splitFrom : splitAfter) {
+			System.out.println("String is Split: " + splitFrom);
 		}
 		// String startsWith
-		String c = "lerningjava";
-		boolean c1 = c.startsWith("r");
-		System.out.println("String is startsWith :" + c1);
+		String startWith = "Lerningjava";
+		boolean startWithAlphabet = startWith.startsWith("r");
+		System.out.println("String is startsWith :" + startWithAlphabet);
 		// String substring
-		String d = "lerning";
-		System.out.println("String is substring :" + d.substring(2, 5));
+		String findMiddleInName = "Lerning";
+		System.out.println("String is substring :" + findMiddleInName.substring(2, 5));
 		// String toCharArray
-		String d1 = "August";
-		char[] d2 = d1.toCharArray();
-		int d3 = d2.length;
-		for (int i = 5; i < d3; i++) {
-			System.out.println("String is toCharArray :" + d3);
-			// String trim
-			String e = "hello java world";
-			System.out.println("String is trim :" + e.trim() + " hello");
-			// String valueOf
-			int g = 15;
-			boolean g1 = true;
-			String f = String.valueOf(g);
-			String f2 = String.valueOf(g1);
-			System.out.println("String is valueOf :" + f);
-			System.out.println("String is valueOf :" + f2);
-		}
+		String currentMonth = "August";
+		char[] monthArray = currentMonth.toCharArray();
+		int monthLength = monthArray.length;
+		System.out.println("String is tochararray :" + monthLength);
+		// String trim
+		String trimLine = "Hello java world";
+		System.out.println("String is trim :" + trimLine.trim() + " Hello");
+		// String valueOf
+		int intValue = 15;
+		boolean booleanValue = true;
+		String stringIntValue = String.valueOf(intValue);
+		String stringBooleanValue = String.valueOf(booleanValue);
+		System.out.println("String is valueOf :" + stringIntValue);
+		System.out.println("String is valueOf :" + stringBooleanValue);
 	}
+
 }

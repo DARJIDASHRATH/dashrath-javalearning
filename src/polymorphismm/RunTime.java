@@ -1,7 +1,7 @@
 package polymorphismm;
 
 /**
- * Parent calss 
+ * Parent calss
  * 
  * @author DASHRATH
  * @version 16.1.1

@@ -1,16 +1,18 @@
 package collections;
+
 import java.util.Comparator;
+
 /**
- * Demonstrate Comparator interface
- * sub class of Book class
+ * Demonstrate comparator interface sub class of book class
  * 
  * @author DASHRATH
  * @version 23.2.4
- * @since 
+ * @since
  */
+
 class BookThree implements Comparator<Book> {
-	public int compare(Book selfHelp, Book fiction) {
-		return selfHelp.name.compareTo(fiction.name);
+	public int compare(Book selfHelpBook, Book fictionBook) {
+		return selfHelpBook.name.compareTo(fictionBook.name);
 	}
 
 }

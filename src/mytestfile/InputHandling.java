@@ -4,7 +4,7 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 
 /**
- * Input Handling 
+ * Input handling 
  * 
  * @author DASHRATH
  * @version 25.2.0
@@ -15,10 +15,10 @@ public class InputHandling {
 
 	public static void main(String[] args) throws IOException {
 		BufferedReader readFile = new BufferedReader(new InputStreamReader(System.in));
-		String name = readFile.readLine();
-		int age = Integer.parseInt(readFile.readLine());
-		System.out.println("My name is : " + name);
-		System.out.println("My age is : " + age);
+		String myName = readFile.readLine();
+		int myAge = Integer.parseInt(readFile.readLine());
+		System.out.println("My name is : " + myName);
+		System.out.println("My age is : " + myAge);
 	}
 	
 }

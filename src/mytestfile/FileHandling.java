@@ -6,7 +6,7 @@ import java.util.Scanner;
 
 
 /**
- * Reading Txt file using Scanner class
+ * Reading txt file using Scanner class
  * 
  * @author DASHRATH
  * @version 25.1.0

@@ -4,7 +4,7 @@ import java.io.File;
 import java.io.IOException;
 
 /**
- * Created Txt file call myTestFile
+ * Created txt file call myTestFile
  * 
  * @author DASHRATH
  * @version 24.0

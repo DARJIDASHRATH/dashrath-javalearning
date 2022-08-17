@@ -22,12 +22,12 @@ public class Get {
 			System.out.println("The bus is passing through the gate.");
 		}
 		// Craeting an object
-		Get b1 = new Get();
-		Get b2 = new Get();
-		Get b3 = new Get();
-		System.out.println(b1.toString());
-		System.out.println(b2.toString());
-		System.out.println(b3.toString());
+		Get busOne = new Get();
+		Get busTwo = new Get();
+		Get busThree = new Get();
+		System.out.println(busOne.toString());
+		System.out.println(busTwo.toString());
+		System.out.println(busThree.toString());
 	}
 
 }

@@ -1,7 +1,7 @@
 package polymorphismm;
 
 /**
- * 2nd Child class of Runtime
+ * 2nd child class of runtime
  * 
  * @author DASHRATH
  * @version 16.1.3
@@ -12,7 +12,7 @@ public class RunTimeTwo extends RunTime {
 
 	public void companyName() 
 	{
-		System.out.println("MicroSoft");
+		System.out.println("Microsoft");
 	}
 	
 }

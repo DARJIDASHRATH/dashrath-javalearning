@@ -109,20 +109,19 @@ border: 1px solid rgb(142, 24, 24);
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js" ></script>
 
 <script>
- $(document).ready(function() { 
-$("#mobileError").hide();
-$("form").submit(function(e){
-	var a = $("#document").val();
-    var filter = /^[0-9-+]+$/;
-    if (filter.test(a)) {
-    	$("#mobileError").hide();
-        return true;
-    }
-    else {
-		$("#mobileError").show();
-        return false;
-    }
-});
-});
+	$(document).ready(function() {
+		$("#mobileError").hide();
+		$("form").submit(function(e) {
+			var a = $("#document").val();
+			var filter = /^[0-9-+]+$/;
+			if (filter.test(a)) {
+				$("#mobileError").hide();
+				return true;
+			} else {
+				$("#mobileError").show();
+				return false;
+			}
+		});
+	});
 </script>
 </html>

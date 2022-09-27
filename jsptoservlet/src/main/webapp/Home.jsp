@@ -31,8 +31,7 @@ border: 1px solid rgb(142, 24, 24);
 <body class="full-form">
 	<section class="vh-100 gradient-custom">
 		<div class="container py-5 h-100">
-			<div
-				class="row d-flex justify-content-center align-items-center h-100">
+			<div class="row d-flex justify-content-center align-items-center h-100">
 				<div class="col-12 col-md-8 col-lg-6 col-xl-5">
 					<div class="card bg-dark text-white" style="border-radius: 1rem;">
 						<div class="card-body p-5 text-center">
@@ -41,7 +40,6 @@ border: 1px solid rgb(142, 24, 24);
 									<h2 class="head">Employee Register Form</h2>
 
 									<a href="<%=request.getContextPath()%>/list"> </a>
-
 								</header>
 
 								<c:if test="${employee == null}">
@@ -50,8 +48,8 @@ border: 1px solid rgb(142, 24, 24);
 								<c:if test="${employee != null}">
 									<form action="update" method="get">
 								</c:if>
+								
 								<table class="w-100">
-
 									<tr>
 										<td>First Name :</td>
 										<td><c:if test="${employee != null}">

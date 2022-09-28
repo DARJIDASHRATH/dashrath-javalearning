@@ -24,7 +24,7 @@ import com.javabean.Employee;
 
 @WebServlet("/")
 public class Servlet extends HttpServlet {
-	private static final long serialVersionUID = 1L;
+	
 	private EmployeeDao employeeDao;
 	private String firstName;
 	private String contactNo;

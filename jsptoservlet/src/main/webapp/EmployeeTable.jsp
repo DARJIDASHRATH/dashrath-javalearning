@@ -40,14 +40,12 @@
 </head>
 <body>
 	<script>
-		function geek() {
+		function deleteConform(url) {
 			var doc;
-			var result = confirm("Press a button!");
+			var result = confirm("Are you sure you want to delete?");
 			if (result == true) {
-				doc = "OK was pressed.";
-			} else {
+				window.open("delete?id=" + url, "_self");
 			}
-			document.getElementById("g").innerHTML = doc;
 		}
 	</script>
 	<section class="vh-100 gradient-custom">
@@ -88,8 +86,8 @@
 												<td><c:out value="${Employee.address}" /></td>
 												<td><c:out value="${Employee.contactNo}" /></td>
 												<td><a href="edit?id=<c:out value='${Employee.id}'/>">Edit</a>
-													&nbsp;&nbsp;&nbsp;&nbsp; <a onclick="geek()" id="index"
-													href="delete?id=<c:out  value='${Employee.id}'/>">Delete</a>
+													&nbsp;&nbsp;&nbsp;&nbsp; <a onclick="deleteConform('${Employee.id}')" id="index"
+													>Delete</a>
 												</td>
 											</tr>
 										</c:forEach>

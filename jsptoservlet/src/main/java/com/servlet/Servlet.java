@@ -6,13 +6,16 @@ import java.util.List;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
+import javax.servlet.ServletRequest;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import com.employeedao.EmployeeDao;
+import com.employeedao.UtilDb;
 import com.javabean.Employee;
+import com.mysql.cj.util.Util;
 
 /**
  * Servlet class for add, edit and update method  
@@ -24,13 +27,16 @@ import com.javabean.Employee;
 
 @WebServlet("/")
 public class Servlet extends HttpServlet {
-	
-	private EmployeeDao employeeDao;
+	private static final long serialVersionUID=1L; 
+	private static EmployeeDao employeeDao;
 	private String firstName;
 	private String contactNo;
 
+	public void Employee() {
+	}
+	
 	public void init() {
-		employeeDao = new EmployeeDao();
+		 employeeDao = new EmployeeDao();
 	}
 
 	protected void doPost(HttpServletRequest request, HttpServletResponse response)
@@ -38,7 +44,7 @@ public class Servlet extends HttpServlet {
 		doGet(request, response);
 	}
 
-	protected void doGet(HttpServletRequest request, HttpServletResponse response)
+	public void doGet(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
 		String action = request.getServletPath();
 		try {
@@ -67,9 +73,9 @@ public class Servlet extends HttpServlet {
 		}
 	}
 
-	private void listEmployee(HttpServletRequest request, HttpServletResponse response)
+	private static void listEmployee(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException, SQLException {
-		List<Employee> listEmployee = employeeDao.selectAllEmployees();
+		List<Employee> listEmployee = EmployeeDao.selectAllEmployees();
 		request.setAttribute("listemployee", listEmployee);
 		RequestDispatcher dispatchar = request.getRequestDispatcher("EmployeeTable.jsp");
 		dispatchar.forward(request, response);
@@ -78,19 +84,21 @@ public class Servlet extends HttpServlet {
 	private void showNewForm(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
 		RequestDispatcher dispatchar = request.getRequestDispatcher("Home.jsp");
+		request.setAttribute("redirection","insert"); 
 		dispatchar.forward(request, response);
 	}
 
-	private void showEditForm(HttpServletRequest request, HttpServletResponse response)
+	private static void showEditForm(HttpServletRequest request, HttpServletResponse response)
 			throws SQLException, ServletException, IOException {
 		int id = Integer.parseInt(request.getParameter("id"));
-		Employee existingEmployee = employeeDao.selectEmployee(id);
+		Employee existingEmployee = EmployeeDao.selectEmployee(id);
 		RequestDispatcher dispatcher = request.getRequestDispatcher("Home.jsp");
 		request.setAttribute("employee", existingEmployee);
+		request.setAttribute("redirection","update"); 
 		dispatcher.forward(request, response);
 	}
 
-	private void insertEmployee(HttpServletRequest request, HttpServletResponse response)
+	private static void insertEmployee(HttpServletRequest request, HttpServletResponse response)
 			throws IOException, SQLException {
 		String firstName = request.getParameter("first_name");
 		String lastName = request.getParameter("last_name");
@@ -98,11 +106,11 @@ public class Servlet extends HttpServlet {
 		String address = request.getParameter("address");
 		String contactNo = request.getParameter("contact_no");
 		Employee newEmployee = new Employee(firstName, lastName, userName, address, contactNo);
-		employeeDao.insertEmployee(newEmployee);
+		EmployeeDao.insertEmployee(newEmployee);
 		response.sendRedirect("list");
 	}
 
-	private void updateEmployee(HttpServletRequest request, HttpServletResponse response)
+	private static void updateEmployee(HttpServletRequest request, HttpServletResponse response)
 			throws IOException, SQLException {
 		int id = Integer.parseInt(request.getParameter("id"));
 		String firstName = request.getParameter("first_name");
@@ -111,14 +119,14 @@ public class Servlet extends HttpServlet {
 		String address = request.getParameter("address");
 		String contactNo = request.getParameter("contact_no");
 		Employee updateEmp = new Employee(id, firstName, lastName, userName, address, contactNo);
-		employeeDao.updateEmployee(updateEmp);
+		EmployeeDao.updateEmployee(updateEmp);
 		response.sendRedirect("list");
 	}
 
-	private void deleteEmployee(HttpServletRequest request, HttpServletResponse response)
+	private static void deleteEmployee(HttpServletRequest request, HttpServletResponse response)
 			throws IOException, SQLException {
 		int id = Integer.parseInt(request.getParameter("id"));
-		employeeDao.deleteEmployee(id);
+		EmployeeDao.deleteEmployee(id);
 		response.sendRedirect("list");
 	}
 

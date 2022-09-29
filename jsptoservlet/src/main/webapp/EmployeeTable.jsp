@@ -17,6 +17,10 @@
 	color: #dae0e7;
 }
 
+.delete-button{
+cursor: pointer;
+}
+
 .button-right {
 	display: flex;
 	flex-direction: row-reverse;
@@ -86,7 +90,7 @@
 												<td><c:out value="${Employee.address}" /></td>
 												<td><c:out value="${Employee.contactNo}" /></td>
 												<td><a href="edit?id=<c:out value='${Employee.id}'/>">Edit</a>
-													&nbsp;&nbsp;&nbsp;&nbsp; <a onclick="deleteConform('${Employee.id}')" id="index"
+													&nbsp;&nbsp;&nbsp;&nbsp; <a onclick="deleteConform('${Employee.id}')" class="delete-button"
 													>Delete</a>
 												</td>
 											</tr>

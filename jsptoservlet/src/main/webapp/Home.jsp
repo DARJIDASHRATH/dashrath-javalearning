@@ -25,7 +25,8 @@ border: 1px solid rgb(142, 24, 24);
     
     /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
     background: linear-gradient(to right, rgba(106, 17, 203, 1), rgba(37, 117, 252, 1));
-    }</style>
+    }
+    </style>
 </head>
 
 <body class="full-form">
@@ -37,57 +38,48 @@ border: 1px solid rgb(142, 24, 24);
 						<div class="card-body p-5 text-center">
 							<div class="mb-md-5 mt-md-4 pb-5">
 								<header>
-									<h2 class="head">Employee Register Form</h2>
-
+									<h2 class="head">Employee Register Form</h2><br>
 									<a href="<%=request.getContextPath()%>/list"> </a>
-								</header>
-
-								<c:if test="${employee == null}">
-									<form action="insert" method="get">
-								</c:if>
-								<c:if test="${employee != null}">
-									<form action="update" method="get">
-								</c:if>
-								
+								</header>						
+									<form action="${redirection}" method="get">				
 								<table class="w-100">
 									<tr>
 										<td>First Name :</td>
 										<td><c:if test="${employee != null}">
 												<input type="hidden" name="id"
 													value="<c:out value='${employee.id}' />" />
-											</c:if> <input type="text"
-											placeholder="Please write your first name" name="first_name"
+											</c:if> <input type="text" pattern="[a-zA-Z^\s]+"
+ 											placeholder="E.g. Dashrath" name="first_name"
 											class="form-control" required
 											value="<c:out value='${employee.firstName}' />"></td>
 									</tr>
 									<tr>
 										<td>Last Name :</td>
-										<td><input type="text"
-											placeholder="Please write your last name" name="last_name"
+										<td><input type="text" pattern="[a-zA-Z^\s]+" 
+											placeholder="E.g. Darji" name="last_name"
 											class="form-control" required
 											value="<c:out value='${employee.lastName}' />"></td>
 									</tr>
 									<tr>
 										<td>User Name :</td>
-										<td><input type="text"
-											placeholder="Please write your user name" name="user_name"
+										<td><input type="text" 
+											placeholder="E.g. DashrathDarji" name="user_name"
 											class="form-control" required
 											value="<c:out value='${employee.userName}' />"></td>
 									</tr>
 									<tr>
 										<td>Address :</td>
 										<td><input type="text"
-											placeholder="Please write your address" name="address"
+											placeholder="E.g. Ahmedabad" name="address"
 											class="form-control" required
 											value="<c:out value='${employee.address}' />"></td>
 									</tr>
 									<tr class="contact">
 										<td>Contact No :</td>
-										<td><input type="number" id="document"
-											placeholder="Please write your contact no" name="contact_no"
-											class="form-control" required
-											value="<c:out value='${employee.contactNo}' />"> <spna
-												id="mobileError">Error mobile no.</spna></td>
+										<td><input type="tel"  id="document" onkeydown="return checkPhoneKey(event.key)"
+											placeholder="E.g. 9662325594" name="contact_no"
+											class="form-control" required 
+											value="<c:out value='${employee.contactNo}' />"> </td>
 									</tr>
 									<tr>
 										<td>
@@ -96,6 +88,7 @@ border: 1px solid rgb(142, 24, 24);
 											<button type="RESET" class="submit">Clear</button></td>
 									</tr>
 								</table>
+								</form>						
 							</div>
 						</div>
 					</div>
@@ -107,19 +100,9 @@ border: 1px solid rgb(142, 24, 24);
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js" ></script>
 
 <script>
-	$(document).ready(function() {
-		$("#mobileError").hide();
-		$("form").submit(function(e) {
-			var a = $("#document").val();
-			var filter = /^[0-9-+]+$/;
-			if (filter.test(a)) {
-				$("#mobileError").hide();
-				return true;
-			} else {
-				$("#mobileError").show();
-				return false;
-			}
-		});
-	});
+function checkPhoneKey(key) {
+	  return (key >= '0' && key <= '9') ||
+	    ['+','(',')','-','ArrowLeft','ArrowRight','Delete','Backspace',' '].includes(key);
+	}
 </script>
 </html>

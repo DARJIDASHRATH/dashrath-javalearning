@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<meta content="width=device-width, initial-scale=1.0" name="viewport">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+	<title>Customer Management</title>
+	<meta content="" name="description">
+	<meta content="" name="keywords">
+	<link href="https://fonts.gstatic.com" rel="preconnect">
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Nunito:300,300i,400,400i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+</head>
+
+<style>
+	body {
+		font-family: "Open Sans", sans-serif;
+		background: #f6f9ff;
+		color: #444444;
+	}
+
+	:root {
+		scroll-behavior: smooth;
+	}
+
+
+label.error {
+    color: red;
+    font-size: 1rem;
+    display: block;
+    margin-top: 5px;
+}
+
+input.error {
+    border: 1px dashed red;
+    font-weight: 300;
+    color: red;
+}
+
+	h1,
+	h2,
+	h3,
+	h4,
+	h5,
+	h6 {
+		font-family: "Nunito", sans-serif;
+	}
+
+	#main {
+		margin-top: 20px;
+		padding: 20px 30px;
+	transition: all 0.3s;
+}
+
+	.card {
+		margin-bottom: 30px;
+		border: none;
+		border-radius: 15px;
+		box-shadow: 20px 0 30px rgb(128, 128, 255);
+	}
+
+	.card-header,
+	.card-footer {
+		border-color: #ebeef4;
+		background-color: #fff;
+		color: #798eb3;
+		padding: 25px;
+	}
+
+	.card-title {
+		padding: 10px 0 px 0;
+		font-size: 20px;
+		font-weight: 500;
+		color: #012970;
+		font-family: "Poppins", sans-serif;
+	}
+
+	.card-title span {
+		color: #899bbd;
+		font-size: 14px;
+		font-weight: 400;
+	}
+
+	.card-body {
+		padding: 0 20px 20px 20px;
+	}
+
+	.nav-tabs-bordered .nav-link.active {
+		background-color: #fff;
+		color: #4154f1;
+		border-bottom: 2px solid #4154f1;
+	}
+
+	.logo img {
+		max-height: 56px;
+		margin-right: 8px;
+	}
+
+	.logo span {
+		font-size: 26px;
+		font-weight: 700;
+		color: #012970;
+		font-family: "Nunito", sans-serif;
+	}
+
+	.footer {
+		padding: 20px 0;
+		font-size: 14px;
+		transition: all 0.3s;
+		border-top: 1px solid #cddfff;
+	}
+
+	.footer .copyright {
+		text-align: center;
+		color: #012970;
+	}
+
+	.footer .credits {
+		padding-top: 5px;
+		text-align: center;
+		font-size: 13px;
+		color: #012970;
+	}
+
+</style>
+<body align = "center">
+	<main >
+		<div class="container">
+			<section class="section register min-vh-100 d-flex flex-column align-items-center justify-content-center py-4">
+				<div class="container">
+					<div class="row justify-content-center">
+						<div class="col-lg-7 col-md-6 d-flex flex-column align-items-center justify-content-center">
+							<div class="d-flex justify-content-center py-4">
+								<a class="logo d-xl-flex align-items-center w-auto">
+									<img src="https://qdevtechnolab.com/assets/images/logo.png"  alt="">
+									<span class="d-none d-lg-block">Qdev Technolab Admin</span>
+								</a>
+							</div>
+
+							<div class="card mb-5">
+								<div class="card-body">
+									<div class="pt-4 pb-2" >
+										<a class="card-title text-center pb-0 fs-4" id="herderid" th:href="@{/customer}"></a>
+									</div>
+										<div class="card-body">
+											<h2 class="text-center"
+												th:text="${id !=null?'Edit Customer':'Add Customer'}">
+											</h2>
+											<hr/>
+												<form action="/customer" th:object="${customer}" method="POST"
+													 id="myform" class = "row g-3 " >
+												<input id="id" type="hidden" name="id" th:field="*{id}"
+													class="form-control" />
+														<div class="col-12">
+														<label for="yourFirstname" class="form-label">First Name</label>
+														<div>
+															<input type="text" name="firstname" th:field="*{firstName}" class="alphabetOnly form-control" id="yourFirstname" >	
+														</div>
+													</div>
+
+													<div class="col-12">
+														<label for="yourLastname" class="form-label" style="margin-top:2%;">Last Name</label>
+														<div>
+															<input type="text" name="lastname" th:field="*{lastName}" class="alphabetOnly form-control" id="yourLastname">
+														</div>
+													</div>
+
+													<div class="col-12">
+														<label for="yourDateofbirth" class="form-label" style="margin-top:2%;">Date of birth</label>
+														<div>
+															<input type="date" th:field="*{dateOfBirth}" name="Dateofbirth" class="form-control" id="yourDateofbirth">
+														</div>
+													</div>
+
+													<div class="col-12">
+														<label for="yourAddressline1" class="form-label" style="margin-top:2%;">Address line 1</label>
+														<div>
+															<input type="text" name="addresssline1"  th:field="*{address1}" class="form-control" id="addresssline1">
+														</div>
+													</div>
+
+													<div class="col-12">
+														<label for="yourAddressline2" class="form-label" style="margin-top:2%;">Address line 2</label>
+														<div>
+															<input type="text" name="addresssline2" th:field="*{address2}" class="form-control" id="yourAddressline2">
+														</div>
+													</div>
+
+													<div class="col-12">
+														<label for="yourAge" class="form-label" style="margin-top:2%;">Age</label>
+															<div>
+																<input type="number" name="age" th:field="*{age}" class="form-control" id="yourAge" min=1 max=999
+																	onKeyPress="if(this.value.length==3) return false;">
+															</div>
+													</div>
+
+													<div class="col-12">
+														<label for="yourGender" style="margin-top:2%;">Gender</label><br>
+															<div>
+																<input type="radio" id="male" name="gender" th:field="*{gender}" style="margin-left:5px; " value="1">
+																<label for="male" style="margin-left:2px; margin-top:1%">Male</label>
+																<input type="radio" id="female" name="gender" th:field="*{gender}" style="margin-left:5px;" value="2">
+																<label for="female" style="margin-left:2px; margin-top:1%">Female</label>
+																<input type="radio" id="other" name="gender" th:field="*{gender}" style="margin-left:5px;" value="3">
+																<label for="other" style="margin-left:2px; margin-top:1%">Other</label>
+															</div>
+													</div>
+
+													<div class="col-12">
+														<label for="yourMobilenumber" style="margin-top:2%;" class="form-label">Mobile Number</label>
+															<div>
+																<input type="tel" name="mobilenumber" th:field="*{mobileNumber}" class="form-control" id="mobileNumber"
+																	 onkeydown="return checkPhoneKey(event.key)" required>
+															</div>
+															<span id="mobileNumberMsg"></span>
+													</div>
+
+													<div class="col-12">
+														<label for="yourEmail" class="form-label" style="margin-top:2%;">Email</label>
+															<div>
+																<input type="text" name="email" th:field="*{email}" class="form-control" id="email" pattern:"[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" >
+															</div>
+															<span id="emailMsg"></span>
+													</div>
+													<br>
+
+													<div class="col-12" style="margin-top:5%; margin-left:25% ">
+													 <input class="btn btn-primary w-50" id="btnSubmit" type="submit" value="SUBMIT">
+													</div>
+												</form>
+										</div>
+									</div>
+
+									<div class="credits" style="margin-left: 200px; margin-top:-1%;">
+										 Designed by <a href="https://qdevtechnolab.com/" style="text-decoration: none;">Qdev Technolab</a>
+									</div>
+									<div class="credits" style="margin-left: 250px; margin-top:1%; margin-bottom:1%; ">
+										Author <a href="https://" style="text-decoration: none;">Dashrath</a>
+									</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+		</div>
+	</main>
+</body>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script> 
+<script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.5/dist/jquery.validate.js"></script>
+<script>
+
+$(document).ready(function() {
+
+		$("#myform").validate({
+			rules: {
+				'firstName': {
+					required: true,
+					},
+
+				'lastName': {
+					required: true,
+					},
+
+				'dateOfBirth': {
+					required: true,
+					},
+
+				'email': {
+					required: true,
+					uniqueEmail: true,
+					},
+
+				'age': {
+					required: true,
+					},
+
+				'address1': {
+					required: true,
+					},
+
+				'address2': {
+					required: true,
+					},
+
+				'mobileNumber': {
+					required: true,
+					uniqueMobileNumber: true,
+					}
+
+				},
+
+			messages: {
+				firstName: {
+				required: "Please enter the First name.",
+				},
+
+			lastName: {
+				required: "Please enter the Last name.",
+			},
+
+			dateOfBirth: {
+				required: "Please pick your Date Of Birth.",
+			},
+
+			mobileNumber: {
+				required: "Please enter phone number.",
+				uniqueMobileNumber:"This mobile number is already exists.."
+			},
+
+			email: {
+				required: "Please enter a valid email.",
+				uniqueEmail: "This email is already exists..."
+			},
+
+			age: {
+				required: "Please enter your age in digit.",
+			},
+
+			address1: {
+				required: "Please enter your address.",
+			},
+
+			address2: {
+				required: "Please enter your address.",
+			},
+
+		},
+
+		submitHandler: function (myform) {
+			if (!this.beenSubmitted) {
+			this.beenSubmitted = true;
+			form.submit();
+			}
+		}
+	});
+		var response;
+			$.validator.addMethod(
+				"uniqueEmail", 
+			function(value, element) {
+			var enteredEmail = $("#email").val();
+			var id = $("#id").val();
+			$.ajax({
+				type: "GET",
+				url: "http://localhost:8086/customer/validate-email/" + enteredEmail  + (id == undefined ? "" : "/" + id),
+				async: false,
+				dataType:"TEXT",
+				success: function(msg){
+					response = ( msg == 'Duplicate' ) ?  false : true ;
+				}
+			});
+				return response;
+			},
+		);
+
+		var response;
+			$.validator.addMethod(
+				"uniqueMobileNumber", 
+			function(value, element) {
+			var enteredMobileNumber = $("#mobileNumber").val();
+			var id = $("#id").val();
+			$.ajax({
+				type: "GET",
+				url: "http://localhost:8086/customer/validate-mobile/" + enteredMobileNumber  + (id == undefined ? "" : "/" + id),
+				async: false,
+				dataType:"TEXT",
+				success: function(msg){
+					response = ( msg == 'Duplicate' ) ?  false : true ;
+				}
+			});
+				return response;
+			},
+		);
+
+});
+
+	jQuery('.alphabetOnly').keyup(function () {
+		this.value = this.value.replace(/[^a-zA-Z\.]/g, '');
+		});
+
+	function checkPhoneKey(key) {
+		return (key >= '0' && key <= '9') ||
+		['+', '(', ')', '-', 'ArrowLeft', 'ArrowRight', 'Delete', 'Backspace', ' ', 'Tab'].includes(key);
+	}
+
+</script>
+
+</html>
